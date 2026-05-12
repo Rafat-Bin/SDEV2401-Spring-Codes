@@ -116,14 +116,10 @@ from .models import Post
 def post_list(request):
     # get all of the posts from the database
     posts = Post.objects.all()
-    # breakpoint() # uncomment this to see the posts in the debugger.
+
     return render(request, 'blog/posts_list.html', {'posts': posts})
     # the third argument is a dictionary that contains the context for the template.
 ```
-- We're going to uncomment the `breakpoint()` line in the code above to see the posts in the debugger. This will allow us to see the posts that are loaded from the database and how they are rendered in the template.
-  - Remember the `breakpoint()` function from last class. To get this to execute all you need to do is run the server and go to the URL in the browser. This will stop the server and allow you to see the posts in the debugger.
-  - Below shows an example of what the posts look like in the debugger. ![debugger example](images/debugger_example.png)
-  - comment (better yet remove) the `breakpoint()` line when you're done with it. This will allow the server to run normally and not stop at the breakpoint every time you go to the URL.
 
 ### 8. Let's update the `posts_list.html` file to dynamically render the posts using the Jinja2 template engine.
 - The jinja2 template engine is used to render the HTML templates in Django. It allows us to use Python code in the templates and dynamically render the content.
