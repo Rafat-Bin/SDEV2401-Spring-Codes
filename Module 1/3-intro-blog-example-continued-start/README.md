@@ -19,6 +19,9 @@ activate the virtual environment:
 - check that you have the requirements installed:
 `pip freeze` this should show the requirements that are installed in the virtual environment.
 
+
+We already did step 1 and step 2 in our previous coding file. If you have done it during last class you can skip it as we are working on same django project folder. If you have not done it follow the previous two coding parts and come back here.
+
 ### 3. Go into the `myblogwebsite` directory and run the server:
 - navigate to the directory:
 `cd myblogwebsite`
