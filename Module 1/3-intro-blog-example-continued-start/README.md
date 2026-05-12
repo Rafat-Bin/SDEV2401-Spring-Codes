@@ -149,11 +149,8 @@ def post_list(request):
 - The above code should look like this in the browser:
 ![site with static post](images/site_with_static_post.png)
 
-- We'll be exploring the Jinja2 template engine in more detail in the upcoming module of the course. Below the post add the `<p>{% debug %}</p>` tag.
-  - This is going to show you all of the context variables that are avialable in the template.
-  - You should see something like the image below in the browser. In <span style="color: green;">green is the context we passed into the template</span> in the previous step. ![jinja with debug](images/jinja_with_debug.png)
+- We'll be exploring the Jinja2 template engine in more detail in the upcoming module of the course. 
 - Jinja2 uses the `{% %}` syntax to denote template tags.
-  - The `{% debug %}` tag is used to show all of the context variables that are available in the template. This is useful for debugging and seeing what variables are available in the template.
   - The `{% %}` syntax is used to denote template tags in Jinja2. This allows us to use Python code in the templates and dynamically render the content.
   - The `{{ }}` syntax is used to denote template variables. This allows us to render the variables in the template and display them in the HTML.
 - Now let's update the template to render the posts dynamically. Open the `posts_list.html` file and change the code to the following:
