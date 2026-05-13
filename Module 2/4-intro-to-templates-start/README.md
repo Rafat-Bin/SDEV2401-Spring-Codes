@@ -10,7 +10,7 @@ It's also used in other areas of development like devops/infrastructure as code,
 ## Steps
 
 ### 1. Create a virtual envirnment and install Django
-`python -m venv ./venv`
+`python3 -m venv ./venv`
 
 activate the virtual environment:
 - linux/mac: `source ./venv/bin/activate`
