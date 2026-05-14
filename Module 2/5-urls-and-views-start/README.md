@@ -34,6 +34,21 @@ activate the virtual environment:
 - let's create a new app called pet adoption helper
 `python manage.py startapp pet_adoption`
 - Note you should now see a new directory called `pet_adoption` in the project directory.
+- Open the `urls_views_fundamentals/settings.py` and add the
+`pet_adoption` app to the `INSTALLED_APPS` list:
+```python
+
+INSTALLED_APPS = [
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+
+    # Custom apps
+    "pet_adoption",
+]
 
 
 ### 5. Let's add our first template to the `pet_adoption` app
@@ -85,21 +100,7 @@ urlpatterns = [
 - Now our entire project doesn't know about this url yet so we need to add it to the project level `urls.py` file.
 
 ### 8. Let's add our first url to the project level `urls.py` file
-- Open the `urls_views_fundamentals/settings.py` and add the
-`pet_adoption` app to the `INSTALLED_APPS` list:
-```python
 
-INSTALLED_APPS = [
-    "django.contrib.admin",
-    "django.contrib.auth",
-    "django.contrib.contenttypes",
-    "django.contrib.sessions",
-    "django.contrib.messages",
-    "django.contrib.staticfiles",
-
-    # Custom apps
-    "pet_adoption",
-]
 ```
 - Open the `urls_views_fundamentals/urls.py` file and add the following code:
 ```python
