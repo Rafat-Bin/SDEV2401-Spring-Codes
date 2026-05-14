@@ -18,17 +18,17 @@ activate the virtual environment:
 - linux/mac: `source ./venv/bin/activate`
 - windows: `.\venv\Scripts\activate`
 
-### 2. Install the requirements for the project from the requirements.txt file or do this pip install django==5.2:
+### 2. Install the requirements for the project from the requirements.txt file or do this `pip install django==5.2`:
 - check that you don't have the requirements installed already:
 `pip freeze` this should show nothing if you just created the virtual environment.
 - install the requirements:
 `pip install -r requirements.txt`
 - check that you have the requirements installed:
 `pip freeze` this should show the requirements that are installed in the virtual environment.
-- create a new django project called urls_views_fundamentals: django-admin startproject urls_views_fundamentals This will create a new directory called urls_views_fundamentals
+- create a new django project called urls_views_fundamentals: `django-admin startproject urls_views_fundamentals` This will create a new directory called urls_views_fundamentals
 
 
-### 4. Navigate inside the `urls_views_fundamentals`  directory (cd urls_views_fundamentals) and create a new "app" named "pet_adoption"
+### 4. Navigate inside the `urls_views_fundamentals`  directory (`cd urls_views_fundamentals`) and create a new "app" named "pet_adoption"
 - remember from the first example that when you're starting a new project you need to initialize the database tables.
 `python manage.py migrate`
 - let's create a new app called pet adoption helper
@@ -37,7 +37,7 @@ activate the virtual environment:
 
 
 ### 5. Let's add our first template to the `pet_adoption` app
-- Create a folder called `templates` in the pet_adoption directory, and in that folder named `pet_adoption`
+- Create a folder called `templates` in the pet_adoption directory, and in that folder create another folder named `pet_adoption`. It will look like this `pet_adoption/templates/pet_adoption`.
   - Django will look for templates in this directory.
   - Note: if you take a look at the `settings.py` file in the project directory, you'll see that this is where django will look for templates. With the lines
 ```python
