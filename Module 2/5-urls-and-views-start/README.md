@@ -18,16 +18,17 @@ activate the virtual environment:
 - linux/mac: `source ./venv/bin/activate`
 - windows: `.\venv\Scripts\activate`
 
-### 2. Install the requirements for the project from the requirements.txt file:
+### 2. Install the requirements for the project from the requirements.txt file or do this pip install django==5.2:
 - check that you don't have the requirements installed already:
 `pip freeze` this should show nothing if you just created the virtual environment.
 - install the requirements:
 `pip install -r requirements.txt`
 - check that you have the requirements installed:
 `pip freeze` this should show the requirements that are installed in the virtual environment.
+- create a new django project called urls_views_fundamentals: django-admin startproject urls_views_fundamentals This will create a new directory called urls_views_fundamentals
 
 
-### 4. Navigate inside the `urls_views_fundamentals` directory and initialize a new "app" named "pet_adoption"
+### 4. Navigate inside the `urls_views_fundamentals`  directory (cd urls_views_fundamentals) and create a new "app" named "pet_adoption"
 - remember from the first example that when you're starting a new project you need to initialize the database tables.
 `python manage.py migrate`
 - let's create a new app called pet adoption helper
