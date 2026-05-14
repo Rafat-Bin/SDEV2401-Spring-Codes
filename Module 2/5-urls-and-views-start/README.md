@@ -12,7 +12,7 @@ A url is a path to your website that will link to a "view" which is a special dj
 ## Steps
 
 ### 1. Create a virtual envirnment and install Django
-`python -m venv ./venv`
+`python3 -m venv ./venv`
 
 activate the virtual environment:
 - linux/mac: `source ./venv/bin/activate`
