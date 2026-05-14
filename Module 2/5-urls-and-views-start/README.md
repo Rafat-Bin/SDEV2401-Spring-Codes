@@ -101,7 +101,7 @@ urlpatterns = [
 
 ### 8. Let's add our first url to the project level `urls.py` file
 
-```
+
 - Open the `urls_views_fundamentals/urls.py` file and add the following code:
 ```python
 from django.contrib import admin
