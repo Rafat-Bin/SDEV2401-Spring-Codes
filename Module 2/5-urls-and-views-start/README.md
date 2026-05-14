@@ -48,7 +48,8 @@ INSTALLED_APPS = [
 
     # Custom apps
     "pet_adoption",
-] ```
+]
+```
 
 
 ### 5. Let's add our first template to the `pet_adoption` app
