@@ -53,7 +53,7 @@ INSTALLED_APPS = [
 
 
 ### 5. Let's add our first template to the `pet_adoption` app
-- Create a folder called `templates` in the pet_adoption directory, and in that folder create another folder named `pet_adoption`. It will look like this `pet_adoption/templates/pet_adoption`.
+- Create a folder called `templates` in the pet_adoption directory, and in that folder create another folder named `pet_adoption`. It will look like this `templates/pet_adoption`.
   - Django will look for templates in this directory.
   - Note: if you take a look at the `settings.py` file in the project directory, you'll see that this is where django will look for templates. With the lines
 ```python
@@ -72,7 +72,7 @@ TEMPLATES = [
     },
 ]
 ```
-- Inside the `pet_adoption/templates/pet_adoption` directory, copy the file called `home_page.html`, this will be our home page template.
+- Inside the pet_adoption app `/templates/pet_adoption` directory, copy the file called `home_page.html`, this will be our home page template.
 
 ### 6. Let's add our first view to the `pet_adoption` app
 - The view is going to conatian the logic that will connect the url to the template, (we'll be adding the url next!).
