@@ -12,31 +12,48 @@ A url is a path to your website that will link to a "view" which is a special dj
 ## Steps
 
 ### 1. Create a virtual envirnment and install Django
-`python -m venv ./venv`
+`python3 -m venv ./venv`
 
 activate the virtual environment:
 - linux/mac: `source ./venv/bin/activate`
 - windows: `.\venv\Scripts\activate`
 
-### 2. Install the requirements for the project from the requirements.txt file:
+### 2. Install the requirements for the project from the requirements.txt file or do this `pip install django==5.2`:
 - check that you don't have the requirements installed already:
 `pip freeze` this should show nothing if you just created the virtual environment.
 - install the requirements:
 `pip install -r requirements.txt`
 - check that you have the requirements installed:
 `pip freeze` this should show the requirements that are installed in the virtual environment.
+- create a new django project called urls_views_fundamentals: `django-admin startproject urls_views_fundamentals` This will create a new directory called urls_views_fundamentals
 
 
-### 4. Navigate inside the `urls_views_fundamentals` directory and initialize a new "app" named "pet_adoption"
+### 4. Navigate inside the `urls_views_fundamentals`  directory (`cd urls_views_fundamentals`) and create a new "app" named "pet_adoption"
 - remember from the first example that when you're starting a new project you need to initialize the database tables.
 `python manage.py migrate`
 - let's create a new app called pet adoption helper
 `python manage.py startapp pet_adoption`
 - Note you should now see a new directory called `pet_adoption` in the project directory.
+- Open the `urls_views_fundamentals/settings.py` and add the
+`pet_adoption` app to the `INSTALLED_APPS` list:
+```python
+
+INSTALLED_APPS = [
+    "django.contrib.admin",
+    "django.contrib.auth",
+    "django.contrib.contenttypes",
+    "django.contrib.sessions",
+    "django.contrib.messages",
+    "django.contrib.staticfiles",
+
+    # Custom apps
+    "pet_adoption",
+]
+```
 
 
 ### 5. Let's add our first template to the `pet_adoption` app
-- Create a folder called `templates` in the pet_adoption directory, and in that folder named `pet_adoption`
+- Create a folder called `templates` in the pet_adoption directory, and in that folder create another folder named `pet_adoption`. It will look like this `templates/pet_adoption`.
   - Django will look for templates in this directory.
   - Note: if you take a look at the `settings.py` file in the project directory, you'll see that this is where django will look for templates. With the lines
 ```python
@@ -55,7 +72,7 @@ TEMPLATES = [
     },
 ]
 ```
-- Inside the `pet_adoption/templates/pet_adoption` directory, copy the file called `home_page.html`, this will be our home page template.
+- Inside the pet_adoption app `/templates/pet_adoption` directory, copy the file called `home_page.html`, this will be our home page template.
 
 ### 6. Let's add our first view to the `pet_adoption` app
 - The view is going to conatian the logic that will connect the url to the template, (we'll be adding the url next!).
@@ -84,22 +101,8 @@ urlpatterns = [
 - Now our entire project doesn't know about this url yet so we need to add it to the project level `urls.py` file.
 
 ### 8. Let's add our first url to the project level `urls.py` file
-- Open the `urls_views_fundamentals/settings.py` and add the
-`pet_adoption` app to the `INSTALLED_APPS` list:
-```python
 
-INSTALLED_APPS = [
-    "django.contrib.admin",
-    "django.contrib.auth",
-    "django.contrib.contenttypes",
-    "django.contrib.sessions",
-    "django.contrib.messages",
-    "django.contrib.staticfiles",
 
-    # Custom apps
-    "pet_adoption",
-]
-```
 - Open the `urls_views_fundamentals/urls.py` file and add the following code:
 ```python
 from django.contrib import admin
