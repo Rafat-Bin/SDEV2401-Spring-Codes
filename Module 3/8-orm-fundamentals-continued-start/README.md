@@ -21,7 +21,7 @@ In the last class we learned some of the fundamentals of the django ORM.
 Today we're going to combine our knowledge of templates, views, and URLs with our ORM knowledge, to create a simple application that allows us to see records from a database in a template.
 
 - Let's review the models we created in the last module, specifically the `Company` model.
-  - This model has fields like `name`, `location`, and `industry`.
+  - This model has fields like `name`, `email`.
   - We can retrieve all companies from the database using the ORM with `Company.objects.all()`.
   - We can filter companies by location or industry using methods like `Company.objects.filter(FILTER_CONDITION)`, where `FILTER_CONDITION` is the condition we want to filter by.
     - We can also get a specific company by its ID using `Company.objects.get(FILTER_CONDITION)` (the only difference is that this will return a single object, while the previous one returns a queryset).
