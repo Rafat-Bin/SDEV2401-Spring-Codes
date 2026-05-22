@@ -47,7 +47,7 @@ def list_companies(request):
     # this is going to read from
     companies = Company.objects.all()
 
-    return render(request, 'clients/list.html', {'companies': companies})
+    return render(request, 'clients/companies_list.html', {'companies': companies})
 ```
 - Observe the `companies_list.html` template file provided, it will display the list of companies.
 
