@@ -234,8 +234,8 @@ Let's update the `employees_search_results.html` template in your app's `templat
 {% endblock %}
 ```
 Now to test this out, you can go to the URL:
-- `http://localhost:8000/clients/company/1/employees/results/?q=ma` which should return two results: "Mason Lee" and "Emma Martinez".
-`http://localhost:8000/clients/company/1/employees/results/?q=liam` which should return two results: "Liam Nguyen"
+- `http://localhost:8000/clients/company/1/employees/results/?q=di` which should return  results: "Diana Prince"
+`http://localhost:8000/clients/company/1/employees/results/?q=eth` which should return  results: "Ethan Hunt"
 
 ### 6. Let's expand the `employees_search_results` view to search for employees by their last name as well.
 In django there's a special `Q` object that allows us to create complex queries with OR and AND conditions. We can use this to search for employees by their first name or last name.
