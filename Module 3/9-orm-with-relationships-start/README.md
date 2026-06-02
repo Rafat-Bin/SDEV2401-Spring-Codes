@@ -340,10 +340,8 @@ print(f"{first_employee.first_name} {first_employee.last_name} is now assigned t
 ```
 
 ### 9. Let's create a script to load some of the data.
-Let's use the script `load_employees.py` in the root of the folder, note later we'll use something called a management command to do this.
-- The file called `load_employees.py` at the root of the folder has some code that will setup django in a script so that you can use the ORM to create records in the database.
+
 - Import the models `Employee`, `Company`, and `Role` from the `clients` app into the script.
-- Copy over list `new_employees_data_cat_sitting_int` in the `employees_to_add.py` into our `load_employees.py` script.
 
 ```python
 
@@ -387,11 +385,10 @@ for employee_data in new_employees_data_cat_sitting_int:
 ```
 Let's talk about the code above:
 - We imported the `Employee`, `Company`, and `Role` models from the `clients` app.
-- We defined a `main()` function that will be executed when the script is run.
 - In the loop we did a few things
   - We used `get_or_create()` to get or create the company and role based on the data in the `new_employees_data_cat_sitting_int` list.
   - We used `get_or_create()` to create the employee, which will create the employee if it doesn't exist, or return the existing employee if it does.
-  - We printed a message indicating whether the employee was created or already exists.
+
 
 ## Challenge/Exercise
 
