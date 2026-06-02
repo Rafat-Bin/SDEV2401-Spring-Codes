@@ -382,7 +382,7 @@ for employee_data in new_employees_data_cat_sitting_int:
         company=company,
         role=role,
     )
-print("All employees have been processed.")
+
 
 ```
 Let's talk about the code above:
