@@ -371,8 +371,8 @@ new_employees_data_cat_sitting_int = [
     },
 ]
 for employee_data in new_employees_data_cat_sitting_int:
-    company, _ = Company.objects.get_or_create(name=employee_data["company"])
-    role, _ = Role.objects.get_or_create(name=employee_data["role"])
+    company, created = Company.objects.get_or_create(name=employee_data["company"])
+    role, created = Role.objects.get_or_create(name=employee_data["role"])
     employee, created = Employee.objects.get_or_create(
         first_name=employee_data["first_name"],
         last_name=employee_data["last_name"],
