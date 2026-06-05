@@ -27,7 +27,7 @@ class CompanyForm(forms.ModelForm):
     # the inner Meta class tells django which model to use and which fields to include in the form
     class Meta:
         model = Company
-        fields = ['name', 'email', 'website']
+        fields = ['name', 'email', 'description']
         # note in our model we also have created_at and updated_at fields, but we don't need to include them in the form since they are automatically set by django
 ```
 So let's break down what we just did here.
