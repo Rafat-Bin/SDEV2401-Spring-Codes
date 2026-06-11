@@ -147,7 +147,7 @@ Again let's talk about what this code does:
 Let's update the template `update_company.html` to show a success message when the update is successful.
 ```html
 <!-- Title -->
-    {% if success %}
+    
     <!-- Show the success message -->
     {% if success %}
     <div class="mt-4 p-4 bg-green-100 text-green-800 border border-green-200 rounded">
