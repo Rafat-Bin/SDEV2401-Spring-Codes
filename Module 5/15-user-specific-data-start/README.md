@@ -82,7 +82,7 @@ from .models import Announcement
 
 def is_teacher(user):
     # the user object is passed in here by the decorator
-    return user.role == 'Teacher'
+    return user.role == 'teacher'
 
 # ... list view here...
 
