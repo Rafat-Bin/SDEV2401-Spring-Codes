@@ -78,13 +78,13 @@ Change the template project name, in the navbar header section like from.
 ```
 To the following:
 ```html
-{% load static %}
-
-<!-- ... html and head code ...  -->
-{% block header %}
-<!-- ... more code ... -->
-<!-- Added "flex" class so that they're side by side. -->
-<a href="" class="flex text-white text-lg font-semibold">
+<header>
+        {% load static %}
+        {% block header %}
+        <nav class="bg-gray-800 p-4">
+                <div class="max-w-2xl mx-auto flex justify-between items-center">
+                    <!-- Jinja URL used!-->
+                    <a href="" class="flex text-white text-lg font-semibold">
     <!-- Added image -->
     <img src="{% static '/logo-sm.png' %}"
         class="px-2"
