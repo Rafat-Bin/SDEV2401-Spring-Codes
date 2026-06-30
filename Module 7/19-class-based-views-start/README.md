@@ -95,7 +95,7 @@ Open the `templates/base.html` and modify the title so that it links to the home
 ```html
 <!-- ... this inside the header block... -->
 
-<!-- Title -->
+<!-- Header -->
 <a href="{% url 'home' %}" class="flex text-white text-lg font-semibold">
     <!-- Added image -->
     <img src="{% static '/logo-sm.png' %}"
