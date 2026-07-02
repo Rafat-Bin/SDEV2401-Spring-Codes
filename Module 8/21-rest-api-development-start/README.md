@@ -52,10 +52,9 @@ Also in our `settings.py` file, we can add some default settings for Django REST
 ```python
 # ... all other settings ...
 
-# Django REST framework settings
 REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
-        "rest_framework.permissions.IsAuthenticatedOrReadOnly"
+        "rest_framework.permissions.AllowAny"
     ]
 }
 
